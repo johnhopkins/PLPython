@@ -49,4 +49,4 @@ numberOfMatches = int(raw_input('Number of matches? '))
 ##                comms = 'Off Tube Commentary'
 ##
 ##
-##    matchDayInstance.addMatch((Match(homeTeam, awayTeam, kickOff, hostBroadcaster, superFeed, miniFeed, comms)))
+##    matchDayInstance.addMatch((Match(homeTeam, awayTeam, kickOffTime, hostBroadcaster, superFeed, comms)))
