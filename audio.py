@@ -1,23 +1,8 @@
 class Audio(object):
 
-    def __init__ (a,b,c,d,e,f,g,h,i,j,k,m,n,o,p):
-       self.a = a
-       self.b = b
-       self.c = c
-       self.d = d
-       self.e = e
-       self.f = f
-       self.g = g
-       self.h = h
-       self.a = i
-       self.b = j
-       self.c = k
-       self.d = l
-       self.e = m
-       self.f = n
-       self.g = o
-       self.h = p
-
-    def getAllAudios(self):
-        return self.a, self.b, self.c, self.d, self.e, self.f, self.g, self.h, self.i, self.j, self.k, self.l, self.m, self.n, self.o, self.p
-
+   def __init__(self):
+       self.audioConfig = {'Group 1': {'Pair1': ['audio1', 'audio2'], 'Pair2': ['audio3', 'audio4']},
+                           'Group 2': {'Pair3': ['audio5', 'audio6'], 'Pair4': ['audio7', 'audio8']},
+                           'Group 3': {'Pair5': ['audio9', 'audio10'], 'Pair6': ['audio11', 'audio12']},
+                           'Group 4': {'Pair7': ['audio13', 'audio14'], 'Pair8': ['audio15', 'audio16']}
+                           }
