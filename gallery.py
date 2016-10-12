@@ -16,10 +16,10 @@ class Gallery(object):
         return sorted(availableExternals)
 
     def getUnavailableExternals(self):
-        '''Returns a sorted list of gallery externals that are set to True, i.e. they are unavailable'''
+        '''Returns a sorted list of gallery externals that are in use, i.e. they are unavailable'''
         unavailableExternals = []
         for external, value in self.externals.iteritems():
-            if value == True:
+            if value != False:
                 unavailableExternals.append(external)
         return sorted(unavailableExternals)
 
@@ -38,7 +38,7 @@ class Gallery(object):
         '''Returns a sorted list of gallery txs that are set to True, i.e they are unavailable'''
         unavailableTxs = []
         for tx, value in self.tx.iteritems():
-            if value == True:
+            if value != False:
                 unavailableTxs.append(tx)
         return sorted(unavailableTxs)
 
