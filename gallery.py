@@ -2,7 +2,7 @@ class Gallery(object):
     def __init__(self):
         '''Sets up a dictionary of available connections with False representing no connection'''
         self.tx = {'TX1': False, 'TX2':False, 'TX3': False, 'TX4':False}
-        self.externals = {'EXT1': False, 'EXT2':False, 'EXT3': False, 'EXT4':False, 'EXT5': False, 'EXT6':False, 'Ext7': False}
+        self.externals = {'EXT1': False, 'EXT2':True, 'EXT3': False, 'EXT4':False, 'EXT5': False, 'EXT6':False, 'EXT7': False}
 
     def getAllExternals(self):
         return self.externals

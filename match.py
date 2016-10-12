@@ -17,6 +17,12 @@ class Match(object):
     def getKickOff(self):
         return self.kickOff
 
+    def getHostBroadcaster(self):
+        return self.hostBroadcaster
+
+    def getCommentary(self):
+        return self.comms
+
     def superFeed(self):
         return self.superFeed
 
