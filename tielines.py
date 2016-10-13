@@ -12,7 +12,7 @@ class Tieline(object):
         return self.tieline
 
     def howMany(self):
-        # returns number of tielines being used
+        # returns number of tielines being used (not yet implemented)
         return 0
 
     def returnList(self):
