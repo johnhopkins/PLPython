@@ -3,14 +3,31 @@ from gallery import *
 from matchday import *
 from data import *
 from resources import *
+from tielines import *
 
-gallery3 = Gallery()
+a = Tieline()
+b = Tieline()
+c = Tieline()
+d = Tieline()
+f = Tieline()
+g = Tieline()
+h = Tieline()
+i = Tieline()
+j = Tieline()
 
-print(gallery3.getAvailableExternals())
+print(a.tielineNumber())
+print(i.tielineNumber())
 
-print(jgallery3.getAllExternals())
+print(b.howMany())
 
-print(gallery3.getUnavailableExternals())
+# gallery3 = Gallery()
+#
+# print(gallery3.getAvailableExternals())
+#
+# print(gallery3.getAllExternals())
+#
+# print(gallery3.getUnavailableExternals())
+
 
 # #Initialise available resources
 #

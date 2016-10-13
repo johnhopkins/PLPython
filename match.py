@@ -1,12 +1,12 @@
 class Match(object):
     
-    def __init__(self, homeTeam, awayTeam, kickOffTime, hostBroadcaster, superFeed, comms):
+    def __init__(self, homeTeam, awayTeam, kickOffTime, hostBroadcaster, level, comms):
         self.homeTeam = homeTeam
         self.awayTeam = awayTeam
         self.kickOffTime = kickOffTime
         self.hostBroadcaster = hostBroadcaster
         self.comms = comms
-        self.superFeed = superFeed
+        self.level = level
 
     def getHomeTeam(self):
         return self.homeTeam
@@ -23,8 +23,8 @@ class Match(object):
     def getCommentary(self):
         return self.comms
 
-    def superFeed(self):
-        return self.superFeed
+    def level(self):
+        return self.level
 
     def __str__(self):
         return (self.homeTeam + ' v ' + self.awayTeam)
