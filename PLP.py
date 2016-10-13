@@ -18,7 +18,12 @@ j = Tieline()
 print(a.tielineNumber())
 print(i.tielineNumber())
 
-print(b.howMany())
+z = a.returnList()
+
+print(z)
+print(a.tielineNumber())
+print(f.tielineNumber())
+print(j.tielineNumber())
 
 # gallery3 = Gallery()
 #

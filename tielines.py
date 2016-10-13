@@ -1,17 +1,22 @@
 class Tieline(object):
 
-    #This is a class variable used to keep track of how many tielines have been allocated.
-    totalTielinesUsed = 0
+    #This is a class list variable used to keep track of how many tielines have been allocated.
+    availableTielines = []
+    for i in range(1,101):
+        availableTielines.append(i)
 
     def __init__(self):
-        Tieline.totalTielinesUsed +=1
-        self.tieline = Tieline.totalTielinesUsed
+        self.tieline = Tieline.availableTielines.pop(0)
 
     def tielineNumber(self):
         return self.tieline
 
     def howMany(self):
-        return self.totalTielinesUsed
+        # returns number of tielines being used
+        return 0
+
+    def returnList(self):
+        return self.availableTielines
 
 
 
