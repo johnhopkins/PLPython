@@ -3,6 +3,24 @@ from gallery import *
 from matchday import *
 from data import *
 from tielines import *
+from feed import *
+from plan import *
+
+a = Feed('Clean', Plan('002'), Tieline())
+b = Feed('Backup Clean', Plan('082'), Tieline())
+c = Feed('Wide', Plan('004'), Tieline())
+
+print(a.name)
+print(a.tieline.tielineNumber())
+print(a.incomingline.number)
+
+print(b.name)
+print(b.tieline.tielineNumber())
+print(b.incomingline.number)
+
+print(c.name)
+print(c.tieline.tielineNumber())
+print(c.incomingline.number)
 
 print(Tieline.availableTielines)
 
