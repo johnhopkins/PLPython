@@ -2,28 +2,9 @@ from match import *
 from gallery import *
 from matchday import *
 from data import *
-from resources import *
 from tielines import *
 
-a = Tieline()
-b = Tieline()
-c = Tieline()
-d = Tieline()
-f = Tieline()
-g = Tieline()
-h = Tieline()
-i = Tieline()
-j = Tieline()
-
-print(a.tielineNumber())
-print(i.tielineNumber())
-
-z = a.returnList()
-
-print(z)
-print(a.tielineNumber())
-print(f.tielineNumber())
-print(j.tielineNumber())
+print(Tieline.availableTielines)
 
 # gallery3 = Gallery()
 #
