@@ -33,22 +33,7 @@ print(Tieline.availableTielines)
 # print(gallery3.getUnavailableExternals())
 
 
-# #Initialise available resources
-#
-# availableProcs = []
-# linesIn = []
-# linesOut = []
-#
-# for item in processors:
-#     availableProcs.append(Processor(item))
-#
-# for item in incomingLines:
-#     linesIn.append(IncomingLine(item))
-#
-# for item in outgoingLines:
-#     linesOut.append(OutgoingLine(item))
-#
-#
+'''All the following to be webified!'''
 # matchDate = raw_input('Matchday Date ')
 # matchDayInstance = MatchDay(matchDate)
 # numberOfMatches = int(raw_input('Number of matches? '))
