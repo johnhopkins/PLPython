@@ -1,5 +1,4 @@
 class Tieline(object):
-
     #These are class variables used to keep an overview of which tielines
     #have been allocated and which ones haven't
     availableTielines = []
