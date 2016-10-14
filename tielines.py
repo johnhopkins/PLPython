@@ -17,6 +17,3 @@ class Tieline(object):
 
     def returnList(self):
         return self.availableTielines
-
-
-
