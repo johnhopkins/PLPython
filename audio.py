@@ -22,16 +22,3 @@ class Audio(object):
         self.group2 = group2
         self.group3 = group3
         self.group4 = group4
-
-a = AudioChannel('International L')
-b = AudioChannel('International R')
-c = AudioChannel('Mute')
-d = AudioChannel('Mute')
-pair = AudioPair(a, b)
-pair2 = AudioPair(c, d)
-group1 = AudioGroup(pair, pair2)
-
-print(group1.pair1.audio1.name)
-print(group1.pair1.audio2.name)
-print(group1.pair2.audio1.name)
-print(group1.pair2.audio2.name)

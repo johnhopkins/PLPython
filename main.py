@@ -22,3 +22,25 @@ for match in range(numberOfMatches):
     matchDayInstance.addMatch((Match(homeTeam, awayTeam, kickOffTime, hostBroadcaster)))
 
 
+a = Tieline()
+b = Tieline()
+c = Tieline()
+
+print(Tieline.availableTielines)
+print(b.availableTielines)
+print(b.getAvailableTielines())
+print(a.getAvailableTielines())
+print(a.availableTielines)
+
+a = AudioChannel('International L')
+b = AudioChannel('International R')
+c = AudioChannel('Mute')
+d = AudioChannel('Mute')
+pair = AudioPair(a, b)
+pair2 = AudioPair(c, d)
+group1 = AudioGroup(pair, pair2)
+
+print(group1.pair1.audio1.name)
+print(group1.pair1.audio2.name)
+print(group1.pair2.audio1.name)
+print(group1.pair2.audio2.name)
