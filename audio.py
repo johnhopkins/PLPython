@@ -1,8 +1,27 @@
+class AudioChannel(object):
+
+    def __init__(self, name, LR):
+        self.name = name
+        self.LR = LR
+
+class AudioPair(object):
+
+    def __init__(self, audio1, audio2):
+        self.audio1 = audio1
+        self.audio2 = audio2
+
+class AudioGroup(object):
+
+    def __init__(self, pair1, pair2):
+        self.pair1 = pair1
+        self.pair2 = pair2
+
 class Audio(object):
 
-   def __init__(self):
-       self.audioConfig = {'Group 1': {'Pair1': ['audio1', 'audio2'], 'Pair2': ['audio3', 'audio4']},
-                           'Group 2': {'Pair3': ['audio5', 'audio6'], 'Pair4': ['audio7', 'audio8']},
-                           'Group 3': {'Pair5': ['audio9', 'audio10'], 'Pair6': ['audio11', 'audio12']},
-                           'Group 4': {'Pair7': ['audio13', 'audio14'], 'Pair8': ['audio15', 'audio16']}
-                           }
+    def __init__(self, group1, group2, group3, group4):
+        self.group1 = group1
+        self.group2 = group2
+        self.group3 = group3
+        self.group4 = group4
+
+a = Audio()
