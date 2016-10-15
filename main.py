@@ -4,6 +4,7 @@ from matchday import *
 from tielines import *
 from feed import *
 from plan import *
+from audio import *
 
 '''All the following to be webified!'''
 
@@ -27,10 +28,6 @@ b = Tieline()
 c = Tieline()
 
 print(Tieline.availableTielines)
-print(b.availableTielines)
-print(b.getAvailableTielines())
-print(a.getAvailableTielines())
-print(a.availableTielines)
 
 a = AudioChannel('International L')
 b = AudioChannel('International R')
