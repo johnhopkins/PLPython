@@ -24,3 +24,12 @@ class Tieline(object):
         '''returns the individual tieline number of the instance'''
         return self.tieline
 
+a = Tieline()
+b = Tieline()
+c = Tieline()
+
+print(Tieline.availableTielines)
+print(b.availableTielines)
+print(b.getAvailableTielines())
+print(a.getAvailableTielines())
+print(a.availableTielines)
