@@ -1,6 +1,6 @@
 class Tieline(object):
-    #These are class variables used to keep an overview of which tielines
-    #have been allocated and which ones haven't
+    '''Creates a tieline object with an individual numerical identifier, the class
+    keeps track of which tielines have been allocated and which ones are available'''
     availableTielines = []
     for i in range(1,101):
         availableTielines.append(i)
