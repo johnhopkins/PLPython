@@ -4,7 +4,7 @@ from datetime import *
 
 class Application(Frame):
 
-    def setTheMatchdayDate(self):
+    def gotoMatchday(self):
         self.myMatchDay.setDate(datetime((self.variable3.get()), (self.variable2.get()), (self.variable1.get())).date())
 
         self.label.grid_forget()
@@ -47,7 +47,7 @@ class Application(Frame):
         self.dropMenu3 = OptionMenu(self.master, self.variable3, *optionList)
         self.dropMenu3.grid(row=2, column=3)
 
-        self.ok = Button(self.master, text='Add Date', command=self.setTheMatchdayDate)
+        self.ok = Button(self.master, text='Add Date', command=self.gotoMatchday)
         self.ok.grid(row=3, column=2)
 
     def __init__(self, master=None):
@@ -58,7 +58,6 @@ class Application(Frame):
         self.variable2 = None
         self.variable3 = None
         self.createWidgets()
-
 
 root = Tk()
 app = Application(master=root)
