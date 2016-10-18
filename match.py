@@ -1,13 +1,13 @@
 class Match(object):
     
-    def __init__(self, homeTeam, awayTeam, kickOffTime, hostBroadcaster):
-        self.homeTeam = homeTeam
-        self.awayTeam = awayTeam
-        self.kickOffTime = kickOffTime
-        self.hostBroadcaster = hostBroadcaster
-        self.comms = 'comms'
-        self.level = 'level'
-        self.gallery = 'gallery'
+    def __init__(self):
+        self.homeTeam = None
+        self.awayTeam = None
+        self.kickOffTime = None
+        self.hostBroadcaster = None
+        self.comms = None
+        self.level = None
+        self.gallery = None
 
     def getHomeTeam(self):
         return self.homeTeam
