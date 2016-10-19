@@ -6,7 +6,6 @@ class DatePanel(Frame):
     Requires tkinter (obviously) and datetime modules.'''
     def __init__(self, parent, **options):
         Frame.__init__(self, parent, **options)
-        self.grid()
         self.dayLabel = Label(self, text="Day")
         self.monthLabel = Label(self, text="Month")
         self.yearLabel = Label(self, text="Year")
@@ -17,14 +16,18 @@ class DatePanel(Frame):
         self.variable1 = IntVar()
         self.variable1.set(datetime.today().day)
         self.dropMenu1 = OptionMenu(self, self.variable1, *optionlist)
+        self.dropMenu1.config(bg='RED')
         self.dropMenu1.grid(row=1, column=0)
         optionlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         self.variable2 = IntVar()
         self.variable2.set(datetime.today().month)
         self.dropMenu2 = OptionMenu(self, self.variable2, *optionlist)
+        self.dropMenu2.config(bg='RED')
         self.dropMenu2.grid(row=1, column=1)
         optionlist = [2016, 2017, 2018, 2019, 2020, 2021]
         self.variable3 = IntVar()
         self.variable3.set(datetime.today().year)
         self.dropMenu3 = OptionMenu(self, self.variable3, *optionlist)
+        self.dropMenu3.config(bg='RED')
+        self.dropMenu3['menu'].config(bg='RED')
         self.dropMenu3.grid(row=1, column=2)

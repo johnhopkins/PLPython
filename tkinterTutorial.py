@@ -1,6 +1,5 @@
 from tkDatePanel import *
 
-
 class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
@@ -32,6 +31,6 @@ class Application(Frame):
         Button(Frame2, text="Button Z").grid(row=0, column=2)
 
 root = Tk()
-root.geometry("400x300")
+root.geometry("600x300")
 app = Application(master=root)
 app.mainloop()
