@@ -1,8 +1,8 @@
-import datetime
+from datetime import *
 
 class MatchDay(object):
     def __init__(self):
-        self.date = datetime.date.today()
+        self.date = datetime.today()
         self.matches = []
 
     def getDate(self):
