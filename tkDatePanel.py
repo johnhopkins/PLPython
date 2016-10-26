@@ -4,7 +4,9 @@ from datetime import *
 
 class DatePanel(Frame):
     '''A basic date selector widget that can be used in any tkinter project.
-    Requires tkinter (obviously) and datetime modules.'''
+    Requires tkinter (obviously) and datetime modules. Passes the individual
+    date (day, month year) variables back to the parent class so that you do
+    not need to keep a reference to a DatePanel instance'''
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.dayLabel = Label(self, text="Day")

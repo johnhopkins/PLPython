@@ -2,6 +2,7 @@ from tkinter import *
 from matchday import *
 from tkDatePanel import *
 from datetime import *
+from match import *
 
 
 class Application(Frame):
@@ -21,7 +22,7 @@ class Application(Frame):
         self.label['text'] = 'Enter the date the Matches are to be played'
         self.label.grid(row=0, column=1, columnspan=3)
         self.datepanel = DatePanel(self).grid()
-        self.ok = Button(self.master, text='Add Date', command=self.gotomatchday)
+        self.ok = Button(self.master, text='Set Date', command=self.gotomatchday)
         self.ok.grid(row=3, column=2)
 
     def __init__(self, master=None):
