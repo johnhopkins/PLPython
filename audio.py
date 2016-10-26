@@ -3,6 +3,12 @@ class AudioChannel(object):
     def __init__(self, name):
         self.name = name
 
+    def setAudioChannelName(self, name):
+        self.name = name
+
+    def getAudioChannelName(self):
+        return self.name
+
 class AudioPair(object):
 
     def __init__(self, audio1, audio2):
