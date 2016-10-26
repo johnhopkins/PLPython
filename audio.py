@@ -22,10 +22,10 @@ class AudioGroup(object):
 class Audio(object):
 
     def __init__(self, group1, group2, group3, group4):
-        assert isinstance(group1, AudioGroup), 'Audio object only takes objets of type AudioPair'
-        assert isinstance(group2, AudioGroup), 'Audio object only takes objets of type AudioPair'
-        assert isinstance(group3, AudioGroup), 'Audio object only takes objets of type AudioPair'
-        assert isinstance(group4, AudioGroup), 'Audio object only takes objets of type AudioPair'
+        assert isinstance(group1, AudioGroup), 'Audio object only takes objets of type AudioGroup'
+        assert isinstance(group2, AudioGroup), 'Audio object only takes objets of type AudioGroup'
+        assert isinstance(group3, AudioGroup), 'Audio object only takes objets of type AudioGroup'
+        assert isinstance(group4, AudioGroup), 'Audio object only takes objets of type AudioGroup'
         self.group1 = group1
         self.group2 = group2
         self.group3 = group3
