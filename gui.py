@@ -8,15 +8,10 @@ from round import *
 
 class Application(Frame):
 
-    def gotomatchday(self):
-
-        date = datetime(self.datepanel.variable3.get(), self.datepanel.variable2.get(), self.datepanel.variable1.get()).date()
-        self.myMatchDay.setDate(date)
-        self.label1.grid_forget()
-        self.label1 = Label(self.frame1)
-        self.label1['text'] = str(self.myMatchDay.date.strftime('%d %B %Y'))
-        self.label1.grid(row=3, column=3)
-        print(self.myMatchDay.getDate())
+    def addmatchday(self):
+        self.mymatchday = MatchDay(datetime(self.datepanel.variable3.get(), self.datepanel.variable2.get(), self.datepanel.variable1.get()).date())
+        print(self.mymatchday.getDate())
+        self.frame1.grid_forget()
 
     def createwidgets(self):
 
@@ -26,19 +21,18 @@ class Application(Frame):
         self.label.grid(row=0, column=0, columnspan=3)
         self.datepanel = DatePanel(self.frame1)
         self.datepanel.grid(row=1, column=0, columnspan=3)
-        self.ok = Button(self.frame1, text='Set Date', command=self.gotomatchday)
-        self.ok.grid(row=3, column=1)
+        self.addmatchdaybutton = Button(self.frame1, text='Add Match Day', command=self.addmatchday)
+        self.addmatchdaybutton.grid(row=3, column=2)
         self.label1 = Label(self.frame1)
-        self.label1['text'] = str(self.myMatchDay.date.strftime('%d %B %Y'))
         self.label1.grid(row=3, column=3)
         self.frame1.grid()
-        print(self.round.getnumberofmatchdays())
-        print('Round ' + str(self.round.getmatchround()))
+
+        self.frame2 = Frame(root)
+        self.label2 = Label(self.frame2)
+        self.label['text'] = 'Pick some fixtures'
 
     def __init__(self, master=None):
         Frame.__init__(self, master)
-        self.myMatchDay = MatchDay()
-        self.round = Round(11)
         self.grid()
         self.createwidgets()
 

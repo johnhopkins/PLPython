@@ -16,7 +16,7 @@ class Match(object):
         return self.awayTeam
 
     def getKickOff(self):
-        return self.kickOff
+        return self.kickOffTime
 
     def getHostBroadcaster(self):
         return self.hostBroadcaster
