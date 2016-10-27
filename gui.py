@@ -3,6 +3,7 @@ from matchday import *
 from tkDatePanel import *
 from datetime import *
 from match import *
+from round import *
 
 
 class Application(Frame):
@@ -15,7 +16,7 @@ class Application(Frame):
         self.label1 = Label(self.frame1)
         self.label1['text'] = str(self.myMatchDay.date.strftime('%d %B %Y'))
         self.label1.grid(row=3, column=3)
-
+        print(self.myMatchDay.getDate())
 
     def createwidgets(self):
 
@@ -31,11 +32,13 @@ class Application(Frame):
         self.label1['text'] = str(self.myMatchDay.date.strftime('%d %B %Y'))
         self.label1.grid(row=3, column=3)
         self.frame1.grid()
-        print(self.myMatchDay.getDate())
+        print(self.round.getnumberofmatchdays())
+        print('Round ' + str(self.round.getmatchround()))
 
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.myMatchDay = MatchDay()
+        self.round = Round(11)
         self.grid()
         self.createwidgets()
 
