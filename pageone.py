@@ -19,5 +19,5 @@ class PageOne(tk.Frame):
         button2 = tk.Button(self, text="Page Two", command=lambda: controller.show_frame(PageTwo))
         button2.pack()
 
-        # mymatchpicker = MatchPicker(self)
-        # mymatchpicker.pack()
+        mymatchpicker = MatchPicker(self)
+        mymatchpicker.pack()

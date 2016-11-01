@@ -32,5 +32,8 @@ class Application(tk.Tk):
         frame = self.frames[controller]
         frame.tkraise()
 
+        #code to destroy previous frame goes here
+        #previous frame destroy
+
 app = Application()
 app.mainloop()
