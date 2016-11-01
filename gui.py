@@ -1,41 +1,75 @@
-from tkinter import *
-from matchday import *
-from tkDatePanel import *
-from datetime import *
-from match import *
-from round import *
+import tkinter as tk
+
+LARGE_FONT = ("Verdana", 18)
+
+class Application(tk.Tk):
+
+    def __init__(self, *args, **kwargs):
+
+        tk.Tk.__init__(self, *args, **kwargs)
+        container = tk.Frame(self)
+
+        container.pack(side="top", fill="both", expand = True)
+
+        container.grid_rowconfigure(0, weight=1)
+        container.grid_columnconfigure(0, weight=1)
+
+        self.frames = {}
+
+        for F in (StartPage, PageOne, PageTwo):
+
+            frame = F(container, self)
+            self.frames[F] = frame
+            frame.grid(row=0, column=0, sticky="nsew")
+
+        self.show_frame(StartPage)
+
+    def show_frame(self, cont):
+
+        frame = self.frames[cont]
+        frame.tkraise()
 
 
-class Application(Frame):
+class StartPage(tk.Frame):
 
-    def addmatchday(self):
-        self.mymatchday = MatchDay(datetime(self.datepanel.variable3.get(), self.datepanel.variable2.get(), self.datepanel.variable1.get()).date())
-        print(self.mymatchday.getDate())
-        self.frame1.grid_forget()
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self,parent)
+        label = tk.Label(self, text="Start Page", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
 
-    def createwidgets(self):
+        button = tk.Button(self, text="Visit Page 1", command=lambda: controller.show_frame(PageOne))
+        button.pack()
 
-        self.frame1 = Frame(root)
-        self.label = Label(self.frame1)
-        self.label['text'] = 'Enter the date the Matches are to be played'
-        self.label.grid(row=0, column=0, columnspan=3)
-        self.datepanel = DatePanel(self.frame1)
-        self.datepanel.grid(row=1, column=0, columnspan=3)
-        self.addmatchdaybutton = Button(self.frame1, text='Add Match Day', command=self.addmatchday)
-        self.addmatchdaybutton.grid(row=3, column=2)
-        self.label1 = Label(self.frame1)
-        self.label1.grid(row=3, column=3)
-        self.frame1.grid()
+        button2 = tk.Button(self, text="Visit Page 2", command=lambda: controller.show_frame(PageTwo))
+        button2.pack()
 
-        self.frame2 = Frame(root)
-        self.label2 = Label(self.frame2)
-        self.label['text'] = 'Pick some fixtures'
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.grid()
-        self.createwidgets()
+class PageOne(tk.Frame):
 
-root = Tk()
-app = Application(root)
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        label = tk.Label(self, text="Page One!!!", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
+
+        button1 = tk.Button(self, text="Back to Home", command=lambda: controller.show_frame(StartPage))
+        button1.pack()
+
+        button2 = tk.Button(self, text="Page Two", command=lambda: controller.show_frame(PageTwo))
+        button2.pack()
+
+
+class PageTwo(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        label = tk.Label(self, text="Page Two!!!", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
+
+        button1 = tk.Button(self, text="Back to Home", command=lambda: controller.show_frame(StartPage))
+        button1.pack()
+
+        button2 = tk.Button(self, text="Page One", command=lambda: controller.show_frame(PageOne))
+        button2.pack()
+
+app = Application()
 app.mainloop()
