@@ -14,5 +14,5 @@ class Fixtures(Frame):
         self.fixture9 = Label(self, text='v').grid()
         self.fixture10 = Label(self, text='v').grid()
 
-    def test():
-        print('test')
+    def test(printyprint):
+        print(printyprint)
