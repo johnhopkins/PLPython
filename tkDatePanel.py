@@ -1,7 +1,6 @@
 import tkinter as tk
 from datetime import *
 
-
 class DatePanel(tk.Frame):
     '''A basic date selector widget that can be used in any tkinter project.
     Requires tkinter (obviously) and datetime modules.'''
